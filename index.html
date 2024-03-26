@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where To Go</title>
+    <!-- Add your stylesheet link here -->
+    <!--<script src="script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		  <script src="https://cdn.tailwindcss.com"></script>
+	    <link href="styles.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header>
+        <img src="images/header.png" alt="Header Image" class="w-full">
+    </header>
+<nav class="bg-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-center">
+                <div class="flex space-x-4">
+                    <!-- Navbar items -->
+                    <a href="index.html" class="text-lg font-medium text-gray-600 hover:text-green-500 py-4 px-2">HOME</a>
+                    <a href="restaurants.html" class="text-lg font-medium text-gray-600 hover:text-green-500 py-4 px-2">RESTAURANTS</a>
+                    <a href="#" class="text-lg font-medium text-gray-600 hover:text-green-500 py-4 px-2">WHERE TO GO</a>
+                    <a href="thingstodo.html" class="text-lg font-medium text-gray-600 hover:text-green-500 py-4 px-2">THINGS TO DO</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation -->
+     <div class="bg-white p-6 rounded-md shadow-md text-center">
+        <h1 class="text-3xl font-bold mb-4">Location Finder</h1>
+        <button onclick="getLocation()" class="py-2 px-4 bg-green-500 text-white rounded-md shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+            Get My Location
+        </button>
+        <p id="location" class="mt-4 text-gray-700"></p>
+    </div>
+    <br>
+    <div class="flex flex-col items-center justify-center my-8">
+        <input type="text" id="cityInput" placeholder="Enter a city"
+            class="px-4 py-2 w-64 border rounded-md text-gray-700 focus:ring-blue-500 focus:border-blue-500" />
+        <button id="searchButton" onclick="searchAttractions()"
+            class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200">Search</button>
+    </div>
+    
+    <div id="restaurantsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center mx-auto">
+        <!-- Restaurant cards will be appended here -->
+    </div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=65d2942cbe3e8745956225aro865b60&libraries=places"></script>
+    <section class="container mx-auto py-8 px-4">
+        <!-- ,Haifa Restaurants -->
+        <div id="CityId" class="mb-8">
+          
+<h2  id="CityName" class=" text-3xl font-bold mb-4 text-center"></h2>
+            <!-- List of restaurants in Haifa -->
+           <!--<div  class= "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-lg p-6">
+				                    <h3 id = "AttractionName " class="text-lg font-semibold mb-2"></h3>
+
+                    <img src="" alt="Restaurant 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                       <p class="text-gray-600 mb-4">About:<br>  The restaurant serves authentic Lebanese food
+</p> 
+					<p id="OpenHours" class="text-gray-600 mb-2"></p>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="text-blue-500 hover:text-blue-700">
+                            
+						<img src="images/facebook.png" alt="Facebook" class="h-6 w-6">
+
+                        </a>
+                        <a href="#" class="text-blue-500 hover:text-blue-700">
+                        
+						<img src="images/waze.png" alt="Facebook" class="h-6 w-6">
+
+                        </a>
+                        <a href="#" class="text-blue-500 hover:text-blue-700">
+                            
+						<img src="images/phone-call.png" alt="Facebook" class="h-6 w-6">
+
+                        </a>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        <!-- Repeat the same structure for other cities -->
+    </section>
+    <!-- Main content, JavaScript functionality, etc. goes here -->
+
+    <!-- Script tag for JavaScript -->
+    <script src="attractionsHandler.js"></script>
+
+</body>
+</html>
